@@ -1,0 +1,100 @@
+:root{
+	--radius: calc(var(--tablewidth) / 2 - 60px);
+	--tablewidth: 800px;
+}
+
+body {
+	font-family: 'Pacifico', cursive;
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(204, 183, 156);
+}
+
+header {
+	display: flex;
+	justify-content: center;
+}
+
+#popup {
+	position: absolute;
+	left: calc(50% - 150px);
+	top: 15%;
+	padding: 20px;
+	background-color: blanchedalmond;
+	width: 300px;
+	height: fit-content;
+	border: 1px solid black;
+	border-radius: 5px;
+	display: none;
+	flex-direction: column;
+}
+
+button {
+	margin-top: 20px;
+}
+
+#title {
+	font-size: xx-large;
+}
+
+#playerInfosWrapper {
+	margin-top: 60px;
+	border: 2px solid black;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	border-radius: 5px;
+}
+
+.hands {
+	transform: rotate(-4deg)
+}
+
+.hand2 {
+	transform: translateY(15px);
+}
+
+#table {
+	margin: auto;
+	margin-top: 40px;
+	background-color: darkgreen;
+	outline: 10px solid rgb(131, 63, 32);
+	border: 1px solid black;
+	width: var(--tablewidth);
+	aspect-ratio: 2;
+	border-radius: 0 0 50% 50%/0 0 100% 100%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 9px 9px 13px -6px rgba(0,0,0,0.75) inset, 14px 17px 32px 11px rgba(0,0,0,0.75);
+}
+
+.spot {
+	position:absolute;
+	left: calc(50% - 33px);
+	top: 55px;
+	outline: 1px solid rgba(255, 255, 96, 0.705);
+	width: 66px;
+	height: 90px;
+	border-radius: 5px;
+}
+
+.playerName {
+	color: rgba(255, 255, 96, 0.705);
+	display: flex;
+	justify-content: center;
+}
+
+.card {
+	position: absolute;
+	background: url("../assets/Deck.png");
+	width: 48px;
+	height: 64px;
+	border: 1px solid black;
+	border-radius: 5px;
+	left: 4px;
+	
+}
+
+#dealerspot {
+	transform: translateY(65px);
+}
